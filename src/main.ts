@@ -1,7 +1,7 @@
+import { confirm, spinner as createSpinner, intro, isCancel, log, outro } from '@clack/prompts'
+import * as ansis from 'ansis'
 import { EventEmitter } from 'node:events'
 import process from 'node:process'
-import { confirm, intro, isCancel, log, outro, spinner as createSpinner } from '@clack/prompts'
-import * as ansis from 'ansis'
 
 const VERSION = '1.0.0'
 const app = new EventEmitter()
@@ -23,7 +23,7 @@ async function confirmAction(message: string): Promise<boolean> {
   return result
 }
 
-export function main (): void {
+export function main(): void {
   // Remove previous listeners to avoid memory leaks
   app.removeAllListeners('continue')
   app.removeAllListeners('exit')
@@ -37,7 +37,7 @@ export function main (): void {
 
     // Simulate the main process
     spinner.start('Doing something...')
-    await new Promise((resolve) => setTimeout(resolve, 1000))
+    await new Promise(resolve => setTimeout(resolve, 1000))
     spinner.stop('Done!')
 
     log.message('Finished all tasks!')
