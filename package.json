@@ -11,5 +11,9 @@
   },
   "devDependencies": {
     "@types/bun": "^1.2.4"
+  },
+  "dependencies": {
+    "@clack/prompts": "^0.10.0",
+    "ansis": "^3.17.0"
   }
 }
